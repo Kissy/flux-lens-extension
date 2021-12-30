@@ -1,0 +1,37 @@
+.FluxHelmCharts {
+  .TableCell {
+    &.name {
+      flex-grow: 1;
+    }
+    &.version {
+      flex-grow: 0.5;
+    }
+    &.interval {
+      flex-grow: 0.5;
+    }
+    &.age {
+      flex-grow: 0.5;
+    }
+    &.revision {
+      flex-grow: 0.5;
+    }
+    &.reconciled {
+      flex-grow: 1;
+    }
+    &.status {
+      flex-grow: 0.5;
+    }
+    &.status.pull-succeed {
+      color: var(--colorOk);
+    }
+    &.status.package-succeed {
+      color: var(--colorOk);
+    }
+    &.status.pull-failed {
+      color: var(--colorError);
+    }
+    &.status.package-failed {
+      color: var(--colorError);
+    }
+  }
+}

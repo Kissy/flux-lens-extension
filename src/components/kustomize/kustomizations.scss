@@ -1,0 +1,22 @@
+.FluxKustomizations {
+  .TableCell {
+    &.interval {
+      flex-grow: 0.5;
+    }
+    &.age {
+      flex-grow: 0.5;
+    }
+    &.reconciled {
+      flex-grow: 0.5;
+    }
+    &.status {
+      flex-grow: 0.5;
+    }
+    &.status.succeed {
+      color: var(--colorOk);
+    }
+    &.status.failed {
+      color: var(--colorError);
+    }
+  }
+}
