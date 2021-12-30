@@ -3,3 +3,5 @@
 
 node_modules/
 dist/
+
+k8slens-flux2-lens-extension-*.tgz

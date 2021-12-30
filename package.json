@@ -1,5 +1,6 @@
 {
-  "name": "@k8slens/flux2-lens-extension",
+  "name": "@glebiller/flux2-lens-extension",
+  "publisher": "glebiller.github.io",
   "version": "0.1.0",
   "description": "Flux2 CRD",
   "engines": {
