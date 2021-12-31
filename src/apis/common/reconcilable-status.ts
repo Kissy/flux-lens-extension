@@ -1,8 +1,7 @@
-import {Condition} from "./condition";
-import {GitRepository} from "../source/git-repository";
+import { Condition } from "./condition";
 
 export class ReconcilableStatus {
-    observedGeneration: number;
-    conditions?: Condition[];
-    lastHandledReconcileAt?: string;
+  observedGeneration: number;
+  conditions?: Condition[];
+  lastHandledReconcileAt?: string;
 }

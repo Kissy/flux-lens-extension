@@ -1,7 +1,7 @@
 export class AccessFrom {
-    // TODO namespaceSelectors: NamespaceSelector[];
+  // TODO namespaceSelectors: NamespaceSelector[];
 }
 
 class NamespaceSelector {
-    matchLabels: string[];
+  matchLabels: string[];
 }

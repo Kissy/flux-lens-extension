@@ -1,3 +1,3 @@
 export class LocalObjectReference {
-    name: string;
+  name: string;
 }

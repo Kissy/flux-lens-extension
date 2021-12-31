@@ -1,3 +1,1 @@
-export class NamespacedObjectKindReference {
-
-}
+export class NamespacedObjectKindReference {}

@@ -1,56 +1,44 @@
-module.exports =  {
+module.exports = {
   overrides: [
     {
-      files: [
-        "./**/*.ts"
-      ],
+      files: ["./**/*.ts"],
       parser: "@typescript-eslint/parser",
-      extends:  [
-        'plugin:@typescript-eslint/recommended',
-      ],
-      parserOptions:  {
+      extends: ["plugin:@typescript-eslint/recommended"],
+      parserOptions: {
         ecmaVersion: 2018,
-        sourceType: 'module',
+        sourceType: "module"
       },
       rules: {
-        "indent": ["error", 2]
-      },
+        indent: ["error", 2, { SwitchCase: 1 }]
+      }
     },
     {
-      files: [
-        "./**/*.tsx",
-      ],
+      files: ["./**/*.tsx"],
       parser: "@typescript-eslint/parser",
-      extends:  [
-        'plugin:@typescript-eslint/recommended',
-      ],
-      parserOptions:  {
+      extends: ["plugin:@typescript-eslint/recommended"],
+      parserOptions: {
         ecmaVersion: 2018,
-        sourceType: 'module',
-        jsx: true,
+        sourceType: "module",
+        jsx: true
       },
       rules: {
-        "indent": ["error", 2]
-      },
+        indent: ["error", 2, { SwitchCase: 1 }]
+      }
     },
     {
-      files: [
-        "./*.js"
-      ],
-      extends: [
-        'eslint:recommended',
-      ],
+      files: ["./*.js"],
+      extends: ["eslint:recommended"],
       env: {
         node: true
       },
-      parserOptions:  {
+      parserOptions: {
         ecmaVersion: 2018,
-        sourceType: 'module',
+        sourceType: "module"
       },
       rules: {
-        "indent": ["error", 2],
-        "no-unused-vars": "off",
+        indent: ["error", 2, { SwitchCase: 1 }],
+        "no-unused-vars": "off"
       }
-    },
+    }
   ]
 };

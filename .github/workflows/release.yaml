@@ -48,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: glebiller-flux2-lens-extension-${{ env.GITHUB_TAG }}.tgz
-          asset_name: flux2-lens-extension-${{ env.GITHUB_TAG }}.tgz
+          asset_path: glebiller-flux-lens-extension-${{ env.GITHUB_TAG }}.tgz
+          asset_name: flux-lens-extension-${{ env.GITHUB_TAG }}.tgz
           asset_content_type: application/octet-stream

@@ -1,15 +1,18 @@
-import {Renderer} from "@k8slens/extensions";
-import {HelmRepository} from "./helm-repository";
+import { Renderer } from "@k8slens/extensions";
+import { HelmRepository } from "./helm-repository";
 
-export class HelmRepositoriesApi extends Renderer.K8sApi.KubeApi<HelmRepository> {
-}
+export class HelmRepositoriesApi extends Renderer.K8sApi.KubeApi<
+  HelmRepository
+> {}
 
 export const helmRepositoriesApi = new HelmRepositoriesApi({
-    objectConstructor: HelmRepository
+  objectConstructor: HelmRepository
 });
 
-export class HelmRepositoriesStore extends Renderer.K8sApi.KubeObjectStore<HelmRepository> {
-    api = helmRepositoriesApi
+export class HelmRepositoriesStore extends Renderer.K8sApi.KubeObjectStore<
+  HelmRepository
+> {
+  api = helmRepositoriesApi;
 }
 
 export const helmRepositoriesStore = new HelmRepositoriesStore();

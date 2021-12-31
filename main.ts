@@ -1,9 +1,3 @@
-import {Main} from "@k8slens/extensions";
+import { Main } from "@k8slens/extensions";
 
-export default class MainExtension extends Main.LensExtension {
-    onActivate(): void {
-    }
-
-    onDeactivate(): void {
-    }
-}
+export default class MainExtension extends Main.LensExtension {}

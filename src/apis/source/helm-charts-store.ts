@@ -1,15 +1,16 @@
-import {Renderer} from "@k8slens/extensions";
-import {HelmChart} from "./helm-chart";
+import { Renderer } from "@k8slens/extensions";
+import { HelmChart } from "./helm-chart";
 
-export class HelmChartsApi extends Renderer.K8sApi.KubeApi<HelmChart> {
-}
+export class HelmChartsApi extends Renderer.K8sApi.KubeApi<HelmChart> {}
 
 export const helmChartsApi = new HelmChartsApi({
-    objectConstructor: HelmChart
+  objectConstructor: HelmChart
 });
 
-export class HelmChartsStore extends Renderer.K8sApi.KubeObjectStore<HelmChart> {
-    api = helmChartsApi
+export class HelmChartsStore extends Renderer.K8sApi.KubeObjectStore<
+  HelmChart
+> {
+  api = helmChartsApi;
 }
 
 export const helmChartsStore = new HelmChartsStore();
