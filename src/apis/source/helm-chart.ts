@@ -14,7 +14,7 @@ export class HelmChart extends Renderer.K8sApi.KubeObject<
 > {
   static kind = "HelmChart";
   static namespaced = true;
-  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta1/helmcharts";
+  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta2/helmcharts";
 
   static readonly ChartPullFailedReason = "ChartPullFailed";
   static readonly ChartPullSucceededReason = "ChartPullSucceeded";

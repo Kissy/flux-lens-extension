@@ -11,7 +11,7 @@ export class Alert extends Renderer.K8sApi.KubeObject<
 > {
   static kind = "GitRepository";
   static namespaced = true;
-  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta1/gitrepositories";
+  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta2/gitrepositories";
 }
 
 // AlertSpec defines an alerting rule for events involving a list of objects

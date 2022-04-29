@@ -81,6 +81,7 @@
     "mobx": "^6.3.2",
     "moment": "^2.29.1",
     "react-router-dom": "^5.2.0",
+    "rfc6902": "^5.0.1",
     "sass": "^1.45.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^2.0.0",

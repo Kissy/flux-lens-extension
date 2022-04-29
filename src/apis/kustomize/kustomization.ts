@@ -9,6 +9,7 @@ import { ReconcilableStatus } from "../common/reconcilable-status";
 import { CrossNamespaceSourceReference } from "../common/cross-namespace-source-reference";
 import { LocalObjectReference } from "../common/local-object-reference";
 import { KubeConfig } from "../common/kubeconfig";
+import moment from "moment";
 
 export class Kustomization extends Renderer.K8sApi.KubeObject<
   KubeObjectMetadata,
@@ -27,6 +28,17 @@ export class Kustomization extends Renderer.K8sApi.KubeObject<
   static readonly ArtifactFailedReason = "ArtifactFailed";
   static readonly BuildFailedReason = "BuildFailed";
   static readonly HealthCheckFailedReason = "HealthCheckFailed";
+
+  getReconciledAge(): string | number {
+    if (this.status.lastHandledReconcileAt) {
+      return moment(this.status.lastHandledReconcileAt).fromNow();
+    }
+    const ready = this.status.conditions.find(({ type }) => type === "Ready");
+    if (ready && ready.lastTransitionTime) {
+      return moment(ready.lastTransitionTime).fromNow();
+    }
+    return "Never";
+  }
 
   getStatusMessage(): string {
     if (this.spec.suspend) {

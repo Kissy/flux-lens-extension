@@ -12,16 +12,19 @@ export class GitRepository extends Renderer.K8sApi.KubeObject<
 > {
   static kind = "GitRepository";
   static namespaced = true;
-  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta1/gitrepositories";
+  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta2/gitrepositories";
 
   static readonly GitOperationSucceedReason = "GitOperationSucceed";
   static readonly GitOperationFailedReason = "GitOperationFailed";
 
   getReconciledAge(): string | number {
-    if (!this.status.artifact) {
-      return "Never";
+    if (this.status.lastHandledReconcileAt) {
+      return moment(this.status.lastHandledReconcileAt).fromNow();
     }
-    return moment(this.status.artifact?.lastUpdateTime).fromNow();
+    if (this.status.artifact) {
+      return moment(this.status.artifact?.lastUpdateTime).fromNow();
+    }
+    return "Never";
   }
 
   getStatusMessage(): string {

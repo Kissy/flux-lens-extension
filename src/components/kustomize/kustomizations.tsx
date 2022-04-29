@@ -14,6 +14,7 @@ enum columnId {
   path = "path",
   interval = "interval",
   age = "age",
+  reconciled = "reconciled",
   status = "status"
 }
 
@@ -76,6 +77,12 @@ export class Kustomizations extends React.Component<
             id: columnId.age
           },
           {
+            title: "Reconciled",
+            className: "reconciled",
+            sortBy: columnId.reconciled,
+            id: columnId.reconciled
+          },
+          {
             title: "Status",
             className: "status",
             sortBy: columnId.status,
@@ -94,6 +101,7 @@ export class Kustomizations extends React.Component<
           kustomization.spec.path,
           kustomization.spec.interval,
           kustomization.getAge(),
+          kustomization.getReconciledAge(),
           {
             title: kustomization.getStatusMessage(),
             className: kustomization.getStatusClassName()

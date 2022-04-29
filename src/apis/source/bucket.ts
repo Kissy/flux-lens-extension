@@ -10,7 +10,7 @@ export class Bucket extends Renderer.K8sApi.KubeObject<
 > {
   static kind = "Bucket";
   static namespaced = true;
-  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta1/buckets";
+  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta2/buckets";
 }
 
 class BucketSpec {

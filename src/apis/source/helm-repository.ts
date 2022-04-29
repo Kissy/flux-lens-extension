@@ -11,7 +11,7 @@ export class HelmRepository extends Renderer.K8sApi.KubeObject<
 > {
   static kind = "HelmRepository";
   static namespaced = true;
-  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta1/helmrepositories";
+  static apiBase = "/apis/source.toolkit.fluxcd.io/v1beta2/helmrepositories";
 
   static readonly IndexationFailedReason = "IndexationFailed";
   static readonly IndexationSucceededReason = "IndexationSucceed";
